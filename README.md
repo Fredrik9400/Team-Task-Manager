@@ -3,4 +3,3 @@ Team Task Manager
 
 Contributing Authors: 
 Fredrik Skogstad
-Lasse Eidsheim

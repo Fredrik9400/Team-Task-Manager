@@ -1,0 +1,175 @@
+/* Container for the page */
+.wrapper {
+    grid-template-columns: 320px;
+    background-color: #CCCccc;
+    width: 1920px;
+    height: 1080px;
+    border: 2px solid #000000;
+    position: relative;
+    margin: auto;
+}
+
+/* Background for webpage */
+.wrapper>img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.2;
+    height: 100%;
+    width: 100%;
+}
+
+/* Styling of webpage title */
+h1 {
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 84px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell,
+        'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Styling of UL titles */
+h3 {
+    text-align: center;
+    text-decoration: underline;
+    margin-right: 30px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-top: 7px;
+    font-size: 21px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell,
+        'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Container for grid*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: center;
+    position: relative;
+    margin: 30px;
+    column-gap: 30px;
+    grid-auto-rows: minmax(30px, auto);
+}
+
+/* The "+" Button next to input fields  */
+.add-btn {
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+/* Styling of the UL that has the LI inside of it */
+ul {
+    min-height: 400px;
+    background-color: #e9f5f8;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(1, 1, 1, 2);
+}
+
+/* Styling of the LI that displays 
+all tasks, names and assigned tasks */
+li {
+    color: #2c3e50;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-family: 'Raleway', serif;
+    margin-right: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    list-style-type: none;
+    text-transform: capitalize;
+}
+
+/* Styling of titles for the input fields*/
+.name-input, .task-input, .task-assigner-form {
+    position: relative;
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    font-size: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell,
+        'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Setting the size of the input 
+field boxes & font size for the
+ inside of the fields */
+#name,#task {   
+    width: 200px;
+    height: 32px;
+    font-size: 16px;
+    border-radius: 15px;
+    background-color: #e9f5f8;
+    border: 1.5px solid #6E5C67;
+}
+
+/* Setting size of task assigner boxes & 
+font size for the inside of the fields  */
+#name-assigner, #task-assigner {
+    width: 200px;
+    height: 38px;
+    font-size: 16px;
+    margin-right: 40px;
+    background-color: #e9f5f8;
+    border-radius: 15px;
+    border:1.5px solid #6E5C67;
+}
+
+/* Setting the position of the task input field */
+.task-input {
+    text-align: center;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* Setting position of the input 
+fields for the task assigner */
+.task-assigner-form {
+    display: flex;
+    grid-column: 3;
+    grid-row: 1;
+    margin-right: 40px;
+}
+
+
+/* Setting position of name-ul */
+.name-ul {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+/* Setting position of task-ul */
+.task-ul {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* Setting position of task-assigner-ul */
+.task-assigner-ul {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+/* Checkbox styling */
+.strikethrough {
+    text-decoration: line-through;
+    color: grey;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    margin-right: 13px;
+    transform: scale(1.1);
+}
+

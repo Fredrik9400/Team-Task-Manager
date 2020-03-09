@@ -26,6 +26,7 @@ addNameBtn.addEventListener("click", () => {
     if (localStorage.storedNameArray != undefined) {
         storedNameArray = JSON.parse(localStorage.getItem("storedNameArray"));
     }
+    alertUserName();
     const nameInput = name.value;
     storedNameArray.push(nameInput);
     localStorage.setItem("storedNameArray", JSON.stringify(storedNameArray));
@@ -58,6 +59,7 @@ addTaskBtn.addEventListener("click", () => {
     if (localStorage.storedTaskArray != undefined) {
         storedTaskArray = JSON.parse(localStorage.getItem("storedTaskArray"));
     }
+    alertUserTask();
     const taskInput = task.value;
     storedTaskArray.push(taskInput);
     localStorage.setItem("storedTaskArray", JSON.stringify(storedTaskArray));
@@ -123,7 +125,7 @@ assignTaskListElement = () => {
 assignTaskBtn.addEventListener("click", () => {
     assignName();
     assignTask();
-    
+
     assignTaskListElement();
 });
 /* ASSIGN TASK FUNCTIONS - END*/
@@ -186,4 +188,57 @@ loadFromLocaleStorage = () => {
             });
         }
     }
+}
+
+// Function which alerts user if not filled textbox
+function alertUserName() {
+    if (document.getElementById("name").value.length == 0) {
+        alert("ERROR! Input name.");
+        return false;
+    }
+}
+
+function alertUserTask() {
+    if (document.getElementById("task").value.length == 0) {
+        alert("ERROR! Input task.");
+        return false;
+    }
+}
+
+
+// On click, which calls three different functions 
+
+document.getElementById("remove-name-button").onclick = function () {
+    removeLocalName();
+    location.reload();
+
+}
+
+document.getElementById("remove-task-button").onclick = function () {
+    removeLocalTask();
+    location.reload();
+}
+
+document.getElementById("remove-assigned-button").onclick = function () {
+    removeLocalAssigned();
+    location.reload();
+}
+
+// Functions witch clears the localStorage of Names, Tasks and Assigned names and tasks.
+
+
+function removeLocalName() {
+    localStorage.removeItem("storedNameArray");
+
+}
+
+function removeLocalTask() {
+    localStorage.removeItem("storedTaskArray");
+
+}
+
+function removeLocalAssigned() {
+    localStorage.removeItem("storedAssignedNameArray");
+    localStorage.removeItem("storedAssignedTaskArray");
+
 }

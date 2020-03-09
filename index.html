@@ -12,30 +12,37 @@
     <div class="wrapper">
         <h1> Team Task Manager</h1>
         <img src="./images/Background-img.jpeg">
-        <div class="grid-container">            
+        <div class="grid-container">
+
             <div class="name-input">
-                <label for="name"> Name: </label>
                 <input id="name">
-                <img src="images/add-button.svg" id="add-name-btn" class="add-btn">
+                <label> Name: </label>
+                <img src="./images/add-button.svg" id="add-name-btn" class="add-btn">
             </div>
+
             <div class="name-ul">
                 <ul id="name-ul">
                     <div>
                         <h3>Team Members:</h3>
                     </div>
                 </ul>
+                <input id="remove-name-button" type="button" value="CLEAR ALL">
             </div>
+
             <div class="task-input">
-                <label for="task"> Task: </label>
                 <input id="task">
-                <img src="images/add-button.svg" id="add-task-btn" class="add-btn">
+                <label> Task: </label>
+                <img src="./images/add-button.svg" id="add-task-btn" class="add-btn">
             </div>
+
             <div class="task-ul">
                 <ul id="task-ul">
                     <div>
                         <h3>Tasks:</h3>
                     </div>
                 </ul>
+                <input id="remove-task-button" type="button" value="CLEAR ALL">
+
             </div>
             <div class="task-assigner-form">
                 <form class="name-assigner-input">
@@ -46,17 +53,21 @@
                     <label for="task-assigner"> Task: </label>
                     <select id="task-assigner"></select>
                 </form>
-                <img src="images/add-button.svg" id="assign-task-btn" class="add-btn">
+                <img src="./images/add-button.svg" id="assign-task-btn" class="add-btn">
             </div>
             <div class="task-assigner-ul">
                 <ul id="task-assigner-ul">
-                        <div>
-                            <h3>Assigned Tasks:</h3>
+                    <div>
+                        <h3>Assigned Tasks:</h3>
+
                     </div>
                 </ul>
+                <input id="remove-assigned-button" type="button" value="CLEAR ALL">
+
             </div>
         </div>
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>

@@ -92,7 +92,7 @@ createTaskListElement = () => {
 
 
 /* ASSIGN TASK FUNCTIONS */
-// On click, run the function to add assigned name to array in localStorage
+// Add assigned name to array in localStorage
 assignName = () => {
     if (localStorage.AssignedNameArray) {
         AssignedNameArray = JSON.parse(localStorage.getItem("AssignedNameArray"));
@@ -102,7 +102,7 @@ assignName = () => {
     localStorage.setItem("AssignedNameArray", JSON.stringify(AssignedNameArray));
 };
 
-// On click, run the function to add assigned task to array in localStorage
+// Add assigned task to array in localStorage
 assignTask = () => {
     if (localStorage.AssignedTaskArray) {
         AssignedTaskArray = JSON.parse(localStorage.getItem("AssignedTaskArray"));

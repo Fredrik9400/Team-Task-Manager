@@ -171,11 +171,12 @@ loadFromLocaleStorage = () => {
     if (localStorage.AssignedNameArray && localStorage.AssignedTaskArray) {
         AssignedNameArray = JSON.parse(localStorage.getItem("AssignedNameArray"));
         AssignedTaskArray = JSON.parse(localStorage.getItem("AssignedTaskArray"));
-        for (let x of AssignedNameArray) {
+        var zip = (a,b) => a.map((x,i) => [x,b[i]]);
+        for (let [a, b] of zip(AssignedNameArray, AssignedTaskArray)) {
             const li = document.createElement("li");
             const cb = createCheckBox();
             li.appendChild(cb);
-            li.appendChild(document.createTextNode(`Name: ${x} - Task: ${AssignedTaskArray}`));
+            li.appendChild(document.createTextNode(`Name: ${a} - Task: ${b}`));
             taskAssignerUl.appendChild(li);
             cb.addEventListener("click", () => {
                 li.classList.toggle("strikethrough");

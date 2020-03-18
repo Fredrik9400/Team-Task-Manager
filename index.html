@@ -9,63 +9,51 @@
 </head>
 
 <body onload="loadFromLocaleStorage()">
-    <div class="wrapper">
-        <h1> Team Task Manager</h1>
-        <img src="./images/Background-img.jpeg">
-        <div class="grid-container">
+    <h1> Team Task Manager</h1>
 
-            <div class="name-input">
+    <div class="grid-container">
+        <div class="grid-item1">
+            <form class="name-input">
                 <input id="name">
                 <label> Name: </label>
                 <img src="./images/add-button.svg" id="add-name-btn" class="add-btn">
-            </div>
+            </form>
+            <ul class="name-ul">
+                <h3>Team Members:</h3>
+            </ul>
+            <button id="remove-name-button">CLEAR ALL</button>
+        </div>
 
-            <div class="name-ul">
-                <ul id="name-ul">
-                    <div>
-                        <h3>Team Members:</h3>
-                    </div>
-                </ul>
-                <input id="remove-name-button" type="button" value="CLEAR ALL">
-            </div>
-
-            <div class="task-input">
+        <div class="grid-item2">
+            <form class="task-input">
                 <input id="task">
                 <label> Task: </label>
                 <img src="./images/add-button.svg" id="add-task-btn" class="add-btn">
-            </div>
-
-            <div class="task-ul">
-                <ul id="task-ul">
-                    <div>
-                        <h3>Tasks:</h3>
-                    </div>
-                </ul>
-                <input id="remove-task-button" type="button" value="CLEAR ALL">
-
-            </div>
-            <div class="task-assigner-form">
-                <form class="name-assigner-input">
-                    <label for="name-assigner"> Name: </label>
-                    <select id="name-assigner"></select>
-                </form>
-                <form class="task-assigner-input">
-                    <label for="task-assigner"> Task: </label>
-                    <select id="task-assigner"></select>
-                </form>
-                <img src="./images/add-button.svg" id="assign-task-btn" class="add-btn">
-            </div>
-            <div class="task-assigner-ul">
-                <ul id="task-assigner-ul">
-                    <div>
-                        <h3>Assigned Tasks:</h3>
-
-                    </div>
-                </ul>
-                <input id="remove-assigned-button" type="button" value="CLEAR ALL">
-
-            </div>
+            </form>
+            <ul class="task-ul">
+                <h3>Tasks:</h3>
+            </ul>
+            <button id="remove-task-button">CLEAR ALL</button>
         </div>
+
+        <div class="grid-item3">
+            <form class="name-assigner-input">
+                <label for="name-assigner"> Name: </label>
+                <select id="name-assigner"></select>
+            </form>
+            <form class="task-assigner-input">
+                <label for="task-assigner"> Task: </label>
+                <select id="task-assigner"></select>
+            </form>
+            <img src="./images/add-button.svg" id="assign-task-btn" class="add-btn">
+
+            <ul class="task-assigner-ul">
+                <h3>Assigned Tasks:</h3>
+            </ul>
+            <button id="remove-assigned-button">CLEAR ALL</button>
+        </div>
+    </div>
+
     </div>
     <script src="app.js"></script>
 </body>
